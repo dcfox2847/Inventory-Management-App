@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foxc482.View.ModifyPartController">
+    <children>
+      <Label layoutX="26.0" layoutY="23.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox layoutX="161.0" layoutY="23.0" prefHeight="27.0" prefWidth="225.0">
+         <children>
+            <RadioButton fx:id="radioModifyPartInHouse" mnemonicParsing="false" onAction="#modifyPartRadio" text="In-House" toggleGroup="$tg">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tg" />
+               </toggleGroup></RadioButton>
+               <RadioButton fx:id="radioModifyPartOutsourced" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modifyPartRadio" text="Outsourced" textAlignment="CENTER" toggleGroup="$tg"></RadioButton>
+         </children>
+      </HBox>
+      <Label layoutX="73.0" layoutY="77.0" text="ID" />
+      <Label layoutX="69.0" layoutY="139.0" text="Name" />
+      <Label layoutX="69.0" layoutY="212.0" text="Inventory" />
+      <Label layoutX="67.0" layoutY="274.0" text="Price/Cost" />
+      <Label fx:id="lblModifyPartDyn" layoutX="73.0" layoutY="403.0" text="Company Name" />
+      <TextField fx:id="txtModifyPartName" layoutX="204.0" layoutY="129.0" prefHeight="38.0" prefWidth="149.0" />
+      <TextField fx:id="txtModifyPartInv" layoutX="204.0" layoutY="202.0" prefHeight="38.0" prefWidth="149.0" />
+      <TextField fx:id="txtModifyPartMax" layoutX="204.0" layoutY="330.0" prefHeight="38.0" prefWidth="83.0" />
+      <TextField fx:id="txtModifyPartMin" layoutX="368.0" layoutY="330.0" prefHeight="38.0" prefWidth="83.0" />
+      <TextField fx:id="txtModifyPartPrice" layoutX="204.0" layoutY="264.0" prefHeight="38.0" prefWidth="149.0" />
+      <Label layoutX="68.0" layoutY="340.0" text="Max" />
+      <Label layoutX="311.0" layoutY="340.0" text="Min" />
+      <TextField fx:id="txtModifyPartDyn" layoutX="204.0" layoutY="393.0" prefHeight="38.0" prefWidth="149.0" />
+      <ButtonBar layoutX="305.0" layoutY="439.0" prefHeight="40.0" prefWidth="174.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#modSavePart" text="Save" />
+            <Button mnemonicParsing="false" onAction="#modCancelPart" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="lblModifyPartIDNumber" layoutX="203.0" layoutY="67.0" style="-fx-border-color: darkgrey; -fx-border-width: 2; -fx-border-radius: 1; -fx-padding: 7;" text="Auto Gen - Disabled">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

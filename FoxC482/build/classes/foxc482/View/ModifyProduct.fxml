@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="txtModifyProductSearch" prefHeight="553.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foxc482.View.ModifyProductController">
+    <children>
+      <Label layoutX="31.0" layoutY="28.0" text="Modify Product">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="442.0" layoutY="13.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="298.0">
+         <children>
+            <TextField fx:id="txtModProductSearch">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnModifyProductSearch" mnemonicParsing="false" onAction="#modSearch" text="Search">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets right="10.0" />
+         </opaqueInsets>
+      </HBox>
+      <TableView fx:id="tvModifyProductAdd" layoutX="350.0" layoutY="63.0" prefHeight="177.0" prefWidth="444.0">
+        <columns>
+          <TableColumn fx:id="tvModifyProductAddIDColumn" prefWidth="92.0" text="Part ID" />
+          <TableColumn fx:id="tvModifyProductAddNameColumn" prefWidth="111.0" text="Part Name" />
+            <TableColumn fx:id="tvModifyProductAddInvColumn" prefWidth="119.0" text="Inventory Level" />
+            <TableColumn fx:id="tvModifyProductAddPriceColumn" prefWidth="121.0" text="Inventory Price" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvModifyProductDelete" layoutX="350.0" layoutY="287.0" prefHeight="177.0" prefWidth="444.0">
+         <columns>
+            <TableColumn fx:id="tvModifyProductDeleteIDColumn" prefWidth="92.0" text="Part ID" />
+            <TableColumn fx:id="tvModifyProductDeleteNameColumn" prefWidth="111.0" text="Part Name" />
+            <TableColumn fx:id="tvModifyProductDeleteInvColumn" prefWidth="119.0" text="Inventory Level" />
+            <TableColumn fx:id="tvModifyProductDeletePriceColumn" prefWidth="121.0" text="Inventory Price" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnModifyProductAdd" layoutX="719.0" layoutY="253.0" mnemonicParsing="false" onAction="#modAdd" prefHeight="25.0" prefWidth="61.0" text="Add" />
+      <Button fx:id="btnModifyProductDelete" layoutX="718.0" layoutY="473.0" mnemonicParsing="false" onAction="#modDelete" prefHeight="25.0" prefWidth="61.0" text="Delete" />
+      <Button fx:id="btnModifyCancelProduct" layoutX="719.0" layoutY="519.0" mnemonicParsing="false" onAction="#modCancel" prefHeight="25.0" prefWidth="61.0" text="Cancel" />
+      <Button fx:id="btnModifySaveProduct" layoutX="645.0" layoutY="519.0" mnemonicParsing="false" onAction="#modSave" prefHeight="25.0" prefWidth="61.0" text="Save" />
+      <Label layoutX="31.0" layoutY="126.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="197.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="279.0" text="Inv">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="359.0" text="Price">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="431.0" text="Max">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="431.0" text="Min">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblModifyProductIDNumber" layoutX="83.0" layoutY="114.0" style="-fx-border-color: darkgrey; -fx-border-width: 2;" text="Auto Gen - Disabled">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="txtModifyProductName" alignment="CENTER" layoutX="83.0" layoutY="189.0" promptText="Product Name" style="-fx-text-align: center;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtModifyProductInv" layoutX="83.0" layoutY="269.0" prefHeight="25.0" prefWidth="80.0" promptText="Inventory">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtModifyProductPrice" layoutX="83.0" layoutY="351.0" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtModifyProductMax" layoutX="83.0" layoutY="423.0" prefHeight="25.0" prefWidth="80.0" promptText="Max">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtModifyProductMin" layoutX="214.0" layoutY="423.0" prefHeight="25.0" prefWidth="80.0" promptText="Min">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+   </children>
+</AnchorPane>
